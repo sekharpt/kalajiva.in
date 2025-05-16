@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kalajiva Technologies</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    header {
+      background: #1b3a4b;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 80px;
+      width: auto;
+      display: block;
+    }
+
+    .site-title h1 {
+      font-size: 1.4em;
+      margin: 0;
+    }
+
+    .site-title p {
+      font-size: 0.7em;
+      margin: 2px 0 0 0;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.95em;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hamburger button */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-left: auto;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background-color: white;
+      margin: 4px 0;
+      border-radius: 2px;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      nav {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        margin-top: 10px;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      nav a {
+        padding: 10px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    section h2 {
+      color: #145374;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      background: #1b3a4b;
+      color: white;
+      padding: 15px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <div class="logo">
+        <img src="Kalajiva_Logo_svg.svg" alt="Kalajiva Logo">
+      </div>
+      <div class="site-title">
+        <h1>Kalajiva Technologies</h1>
+        <p>Enabling Climate Resilience</p>
+      </div>
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="navbar">
+      <a href="#home">Home</a>
+      <a href="#solution">Solution</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <p>Across India, millions face daily income loss from unpredictable climate events — without any financial protection. Mostly insurers focus on high value customers leading to inadequate technology access for micro markets. Kalajiva is changing that.</p>
+    <p>Kalajiva is a unified insurtech platform that brings smart, trigger-based insurance solutions to the underserved and uninsured affected by Natural Catastrophes. We partner with leading insurers and distribution networks to deliver parametric insurance — simple, fast, and transparent coverage triggered by real-world data.</p>
+    <p>We are incubated at Indian Institute of Information Technology, Kottayam - Atul Incubation Center.</p>
+  </section>
+
+  <section id="solution">
+    <h2>Our Solution</h2>
+    <p>Our solution is a platform that connects insurers, intermediaries, and micro-consumers, enabling seamless distribution, policy management, and digital documentation for parametric insurance solutions for the underinsured/uninsured. Kalajiva enables automated, event-triggered insurance that pays users when extreme weather conditions disrupt their work — no claims, no documents, no waiting.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Partner With Us</h2>
+    <p>Kalajiva is actively building partnerships with insurers, community organizations, and ecosystem enablers who share our mission of creating financial protection for the underinsured. If you’re interested in exploring a pilot, co-developing a product, or enabling distribution through your network, we would love to hear from you.</p>
+    <p>Kindly reach out to <strong>sekhar@kalajiva.in</strong></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Kalajiva Technologies. All rights reserved.</p>
+    <p>Chennai, India</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>
